@@ -1,0 +1,68 @@
+#title{
+    width: fit-content;
+    height:auto;
+    border-radius: 5px; 
+    margin:auto; 
+    transform: translate(2%, -5%);
+    border-style:solid;
+    border: 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+#titleText{
+    margin:0 auto; 
+    text-align:center; 
+    border: black; 
+    border-style:double; 
+    background-color:rgba(215, 229, 231, 0.476); 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    text-wrap:stable;
+    border-radius: 5px;
+}
+
+#mainText{
+    color: black;
+    font-family: roboto;
+    text-align: left;
+    padding: 1%;
+    margin: 0 auto;
+}
+
+#centerDiv{
+    height: auto;
+    background-color: #ddf2f4;
+    color: black;
+    border: 2px;
+    border-radius: 5px;
+    border-style:double;
+}
+
+.gfImage{
+    display: none;
+    image-rendering: crisp-edges;
+
+}
+
+.gfName{
+    color: rgb(0, 0, 0);
+}
+
+h1{
+    
+    font-family: "Roboto";
+}
+
+button{
+    display: flex;
+    border-style:ridge;
+    border-radius: 5px;
+    border-color: black;
+    font-family: "Roboto";
+    margin: 0;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
