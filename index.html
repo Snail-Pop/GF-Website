@@ -22,6 +22,10 @@
 
 
     <body>
+
+        <button id="showimgbutton" onclick="showImage()" style="background-color: white; display: none; " disabled>Show Images</button>
+        <button id="hideimgbutton" onclick="hideImage()" style="background-color: white">Hide Images</button>
+
         <div id = "title">
             <!-- TITLE HEADER -->
             <h1 id="titleText">
@@ -34,13 +38,21 @@
 
         
         <div id="centerDiv">
-            <p id="mainText"style="text-wrap:pretty;"> 
+            <p id="mainText"> 
                 As the set finally dipped just below the horizon, I gazed across the water which was shrouded by the newfound darkness. Walking alongside my boyfriend Tayvian, he held onto a small battery-powered lamp which barely illuminated our path. My friend Tate strolled along side us as we walked across the small sandy beach. The cool night air held a comforting warmth, it brushed against my skin as we made our way to a particularly thick portion of brush and bare trees.
+                <br><br>
                 My anxiety had been acting up beforehand, but despite my initial nerves - as this was my first camping trip without my parents with me – I found solace in the shared company of people that I fully trust. Their presence reassured me as I listened to the soothing rhythm of the current conversation, we had been talking about how beautiful of a campsite we were at, and how we had to go through a bit of hell to finally get there. As we continued pushing through the branches of trees and jumping over logs, Tayvian spotted a particularly spacious log in a small clearing ahead. We were all feeling like taking a break, so we quickly made our way over and sat down on the log.
                 <br><br>
                 As I sat down against the rough weathered wood, I nestled against Tayvian, being next to him made even the hardest of logs immediately 10x more comfortable. It was a warm summer night, so the only chill came from a gentle breeze drifting in from the nearby water. Amidst the lapping of waves against the shore, Tayvian and Tate’s voices painting the beach with a warm and inviting conversation. We stayed on the log for a little while, basking in the simplicity of our togetherness that evening. But eventually Tate got tired, as did the rest of us, so he invited us to head back to our tent.
                 <br><br>
                 We stood up from our makeshift bench and I quickly grasped Tayvian’s soft hoodie, despite the lamp that he held, I relied on his guidance through the darkness. The only noise you could hear as we walked back to our tent was the soft sound of our steps in the sand and the rhythm of the waves caressing the shoreline.
+                
+                <div><img class="hidableImage" src="assets/images/Tree.png" alt="Tree.png"></div>
+            </p>
+            <p id="mainText">
+                In the book The Electric Kingdom our main characters eventually meet each other in a serene, wooded forest, most of them had lost their parents so they were on their own. Despite their uncertain situation, they’re able to find solace in the company of each other – even though most of them have just met -. It’s a true show that humans are always able to find some sort of comfort in the presence of other humans, or dogs too, in the case of this book. Even in a post-apocalyptic world full of distrust and fear, people are able to cling to the warmth found in shared conversations and companionship.
+                <br><br>
+                A lot of the characters are able to briefly forget about their current hostile situation to focus on the fun that they’re having with their newfound friends. They need to keep moving to stay safe, so they spend most of their time walking and talking the way that any other person would do. Even when things get tough, they’re able to help each other along the way to the best of their abilities.
                 <br><br>
                 I stirred from an accidental nap, drenched in sweat, feeling the stifling heat from inside Tayvian’s car. I picked up my phone to check what time it was, hoping that maybe we were almost to the campsite. As I looked out the passenger window, I noticed that we were parked on the side of a busy freeway. Immediately confusion started to cloud my mind upon realizing the fact that we weren’t anywhere near the campsite, and even more so that nobody else was in the car with me. The radio hummed tunes through the empty car as I glanced through the windshield, spotting Tayvian, his dad, and Tate outside. Tayvian’s dad had been driving his truck with a boat towed on the back, Tayvian and his dad were fiddling with a tire while Tate sat crouched investigating a light on the trailer.
                 <br><br>
@@ -67,6 +79,44 @@
 
             </p>
         </div>
+
+        <script>
+
+            function showImage(){
+                
+                var images = document.getElementsByClassName('hidableImage');
+                var showButton = document.getElementById('showimgbutton');
+                var hideButton = document.getElementById('hideimgbutton');
+                // Hide show button, show hide button
+                showButton.style.display = "none"
+                hideButton.style.display = "block"
+                // Disable show button
+                showButton.disabled = true;
+                // Enable hide button
+                hideButton.disabled = false;
+                for(i = 0; i < images.length; i++){
+                    images[i].style.display = 'block'
+                }
+            }
+
+            function hideImage(){
+                var images = document.getElementsByClassName('hidableImage');
+                var showButton = document.getElementById('showimgbutton');
+                var hideButton = document.getElementById('hideimgbutton');
+                // Show show button, Hide hide button
+                showButton.style.display = "block"
+                hideButton.style.display = "none"
+                // Disable hide button
+                hideButton.disabled = true;
+                // Enable show button
+                showButton.disabled = false;
+
+                for(i = 0; i < images.length; i++){
+                    images[i].style.display = 'none'
+                }
+            }
+        </script>
+
     </body>
 
 </html>
