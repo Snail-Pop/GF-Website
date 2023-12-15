@@ -111,6 +111,7 @@
             function showImage(){
                 
                 var images = document.getElementsByClassName('hidableImage');
+                var smallImages = document.getElementsByClassName('hidableSmallImage');
                 var showButton = document.getElementById('showimgbutton');
                 var hideButton = document.getElementById('hideimgbutton');
                 // Hide show button, show hide button
@@ -123,10 +124,14 @@
                 for(i = 0; i < images.length; i++){
                     images[i].style.display = 'block'
                 }
+                for(i = 0; i < smallImages.length; i++){
+                    smallImages[i].style.display = 'block'
+                }
             }
 
             function hideImage(){
                 var images = document.getElementsByClassName('hidableImage');
+                var smallImages = document.getElementsByClassName('hidableSmallImage');
                 var showButton = document.getElementById('showimgbutton');
                 var hideButton = document.getElementById('hideimgbutton');
                 // Show show button, Hide hide button
@@ -139,6 +144,10 @@
 
                 for(i = 0; i < images.length; i++){
                     images[i].style.display = 'none'
+                }
+
+                for(i = 0; i < smallImages.length; i++){
+                    smallImages[i].style.display = 'none'
                 }
             }
         </script>
